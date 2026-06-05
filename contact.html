@@ -407,6 +407,10 @@ function sendEmail() {
         `&body=${encodeURIComponent(body)}`;
 
     window.location.href = mailtoLink;
+
+setTimeout(() => {
+    document.querySelector("form").reset();
+}, 500);
 }
 
 </script>
