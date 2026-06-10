@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 *{
     margin:0;
     padding:0;
@@ -51,6 +54,9 @@ body{
    GLOBAL SECTION SPACING
    (PUT THIS EARLY - IMPORTANT)
 ========================= */
+#about{
+    scroll-margin-top: 90px;
+}
 
 #research,
 #academic-journey,
@@ -978,8 +984,9 @@ html {
     justify-content:space-around;
     align-items:center;
     gap:40px;
-
-    backdrop-filter:blur(8px);
+    -webkit-backdrop-filter: blur(8px); /* Safari */
+    backdrop-filter: blur(8px);         /* Chrome, Edge, Firefox */
+    
 }
 
 .contact-item{
@@ -1069,4 +1076,42 @@ body{
     opacity:0;
     transform:translateY(-15px);
     transition:all .6s ease;
+}
+/* =========================
+   MOBILE MENU
+========================= */
+
+.menu-toggle{
+    display:none;
+    font-size:2rem;
+    cursor:pointer;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .nav-links{
+        position:absolute;
+        top:90px;
+        left:0;
+        width:100%;
+
+        background:white;
+
+        flex-direction:column;
+        align-items:center;
+
+        padding:20px 0;
+
+        display:none;
+    }
+
+    .nav-links.show{
+        display:flex;
+    }
 }
