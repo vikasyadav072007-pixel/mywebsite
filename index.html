@@ -13,33 +13,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Dr. Sachchida Nand Chaurasia</title>
+    <title>Dr. Sachchida Nand Chaurasia | Assistant Professor | BHU</title>
 
+    <!-- SEO -->
     <meta name="description"
-        content="Official website of Dr. Sachchida Nand Chaurasia, Assistant Professor, Department of Computer Science, Banaras Hindu University.">
-
-    <meta property="og:title" content="Dr. Sachchida Nand Chaurasia">
-
-    <meta property="og:description"
-        content="Assistant Professor, Department of Computer Science, Banaras Hindu University">
-
-    <meta property="og:type" content="website">
-
-    <meta property="og:image" content="https://nand-scholar-space.vercel.app/assets/file-bHe4tabh.jpeg">
+        content="Official website of Dr. Sachchida Nand Chaurasia, Assistant Professor, Department of Computer Science, Banaras Hindu University. Research interests include Combinatorial Optimization, Machine Learning, Evolutionary Algorithms, Reinforcement Learning, and Swarm Intelligence.">
 
     <meta name="author" content="Dr. Sachchida Nand Chaurasia">
 
     <meta name="keywords"
-        content="Sachchida Nand Chaurasia, BHU, Computer Science, Machine Learning, Evolutionary Algorithms, Research">
+        content="Sachchida Nand Chaurasia, BHU, Computer Science, Machine Learning, Evolutionary Algorithms, Combinatorial Optimization, Reinforcement Learning, Research">
 
     <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
 
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#2b1608">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://vikasyadav072007-pixel.github.io/mywebsite/">
+
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="bhulogo.png">
+
+    <!-- Open Graph (WhatsApp, LinkedIn, Facebook Preview) -->
+    <meta property="og:title" content="Dr. Sachchida Nand Chaurasia | Assistant Professor | BHU">
+
+    <meta property="og:description"
+        content="Assistant Professor, Department of Computer Science, Banaras Hindu University. Research in Combinatorial Optimization, Machine Learning and Evolutionary Algorithms.">
+
+    <meta property="og:type" content="website">
+
+    <meta property="og:url" content="https://vikasyadav072007-pixel.github.io/mywebsite/">
+
+    <meta property="og:site_name" content="Dr. Sachchida Nand Chaurasia">
+
+    <meta property="og:image" content="https://nand-scholar-space.vercel.app/assets/file-bHe4tabh.jpeg">
+
+    <!-- Twitter / X Preview -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="twitter:title" content="Dr. Sachchida Nand Chaurasia | Assistant Professor | BHU">
+
+    <meta name="twitter:description"
+        content="Assistant Professor, Department of Computer Science, Banaras Hindu University.">
+
+    <meta name="twitter:image" content="https://nand-scholar-space.vercel.app/assets/file-bHe4tabh.jpeg">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Main CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -57,7 +85,7 @@
 
             <div class="nav-links">
                 <a href="index.html" class="active">About</a>
-                <a href="https://nand-scholar-space.vercel.app/research">Research</a>
+                <a href="research.html">Research</a>
                 <a href="contact222222.html">Contact</a>
             </div>
 
@@ -101,15 +129,28 @@
 
                 <div class="info-box">
                     <ul>
-                        <li>snchaurasia@bhu.ac.in</li>
-                        <li>sachchidanand.mca07@gmail.com</li>
-                        <li>+91 9492425485</li>
+                        <li>
+                            <a href="mailto:snchaurasia@bhu.ac.in">
+                                snchaurasia@bhu.ac.in
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:sachchidanand.mca07@gmail.com">
+                                sachchidanand.mca07@gmail.com
+                            </a>
+                        </li>
+                        <!-- <li>sachchidanand.mca07@gmail.com</li> -->
+                        <li>
+                            <a href="tel:+919492425485">
+                                +91 9492425485
+                            </a>
+                        </li>
                         <li>Department of Computer Science, BHU</li>
                     </ul>
                 </div>
 
                 <div class="buttons">
-                    <a href="cv.pdf" download class="btn cv">
+                    <a href="snchaurasia@bhu.ac.in.pdf" download class="btn cv">
                         Download CV
                     </a>
 
@@ -660,17 +701,23 @@
 
         </div>
 
-        <div class="footer-bottom">
+        <!-- <div class="footer-bottom">
             © 2024 Dr. Sachchida Nand Chaurasia. All rights reserved.
+        </div> -->
+        <div class="footer-bottom">
+            © <span id="year"></span> Dr. Sachchida Nand Chaurasia. All rights reserved.
         </div>
 
     </footer>
 
-    <script src="scipt.js"></script>
+    <script src="script.js"></script>
     <!-- <body> -->
 
     <!-- Your page content -->
-
+    <script>
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+    </script>
     <script>
         document.querySelectorAll('a').forEach(link => {
 
@@ -759,7 +806,25 @@
                 });
             });
     </script>
+    <button id="topBtn">↑</button>
+    <script>
+        const topBtn = document.getElementById("topBtn");
 
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) {
+                topBtn.style.display = "block";
+            } else {
+                topBtn.style.display = "none";
+            }
+        });
+
+        topBtn.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
 </body>
 
 
