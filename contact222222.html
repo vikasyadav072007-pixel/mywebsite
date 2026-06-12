@@ -448,11 +448,11 @@
 
             const body =
                 `Name: ${firstName} ${lastName}
+Email: ${email}
+subject :${subject}
 
-    Email: ${email}
-
-    Message:
-    ${message}`;
+Message:
+${message}`;
 
             const mailtoLink =
                 `mailto:snchaurasia@bhu.ac.in?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
