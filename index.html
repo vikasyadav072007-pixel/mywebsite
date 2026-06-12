@@ -1,75 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<!-- <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Sachchida Nand Chaurasia</title>
 
     <link rel="stylesheet" href="style.css">
+</head> -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dr. Sachchida Nand Chaurasia | Assistant Professor | BHU</title>
+
+    <!-- SEO -->
+    <meta name="description"
+        content="Official website of Dr. Sachchida Nand Chaurasia, Assistant Professor, Department of Computer Science, Banaras Hindu University. Research interests include Combinatorial Optimization, Machine Learning, Evolutionary Algorithms, Reinforcement Learning, and Swarm Intelligence.">
+
+    <meta name="author" content="Dr. Sachchida Nand Chaurasia">
+
+    <meta name="keywords"
+        content="Sachchida Nand Chaurasia, BHU, Computer Science, Machine Learning, Evolutionary Algorithms, Combinatorial Optimization, Reinforcement Learning, Research">
+
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#2b1608">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://vikasyadav072007-pixel.github.io/mywebsite/">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="bhulogo.png">
+
+    <!-- Open Graph (WhatsApp, LinkedIn, Facebook Preview) -->
+    <meta property="og:title" content="Dr. Sachchida Nand Chaurasia | Assistant Professor | BHU">
+
+    <meta property="og:description"
+        content="Assistant Professor, Department of Computer Science, Banaras Hindu University. Research in Combinatorial Optimization, Machine Learning and Evolutionary Algorithms.">
+
+    <meta property="og:type" content="website">
+
+    <meta property="og:url" content="https://vikasyadav072007-pixel.github.io/mywebsite/">
+
+    <meta property="og:site_name" content="Dr. Sachchida Nand Chaurasia">
+
+    <meta property="og:image" content="https://nand-scholar-space.vercel.app/assets/file-bHe4tabh.jpeg">
+
+    <!-- Twitter / X Preview -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="twitter:title" content="Dr. Sachchida Nand Chaurasia | Assistant Professor | BHU">
+
+    <meta name="twitter:description"
+        content="Assistant Professor, Department of Computer Science, Banaras Hindu University.">
+
+    <meta name="twitter:image" content="https://nand-scholar-space.vercel.app/assets/file-bHe4tabh.jpeg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
-<script>
-/* =====================================
-   SCROLL ANIMATION (FADE IN)
-===================================== */
 
-const sections = document.querySelectorAll("section");
-
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if(entry.isIntersecting){
-            entry.target.classList.add("show");
-        }
-    });
-}, {
-    threshold:0.15
-});
-
-sections.forEach(section => {
-    observer.observe(section);
-});
-
-
-/* =====================================
-   SCROLL SPY (ACTIVE NAV AUTO HIGHLIGHT)
-===================================== */
-
-const navLinks = document.querySelectorAll(".nav-links a");
-
-window.addEventListener("scroll", () => {
-    let current = "";
-
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop - 150;
-        const sectionHeight = section.clientHeight;
-
-        if(pageYOffset >= sectionTop){
-            current = section.getAttribute("id");
-        }
-    });
-
-    navLinks.forEach(link => {
-        link.classList.remove("active");
-        if(link.getAttribute("href") === "#" + current){
-            link.classList.add("active");
-        }
-    });
-});
-
-
-/* =====================================
-   DARK MODE TOGGLE (simple)
-===================================== */
-
-document.addEventListener("keydown", (e) => {
-    if(e.key === "d"){
-        document.body.classList.toggle("dark");
-    }
-});
-</script>
 <body>
-
     <nav>
+        <div class="nav-container">
+
+            <div class="logo">
+                Dr. Sachchida <span>Nand Chaurasia</span>
+            </div>
+
+            <div class="menu-toggle">
+                ☰
+            </div>
+
+            <div class="nav-links">
+                <a href="index.html" class="active">About</a>
+                <a href="res.html">Research</a>
+                <a href="contact222222.html">Contact</a>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- <nav>
         <div class="nav-container">
 
             <div class="logo">
@@ -82,9 +105,9 @@ document.addEventListener("keydown", (e) => {
                 <a href="contact222222.html">Contact</a>
             </div>
         </div>
-    </nav>
+    </nav> -->
 
-    <section class="hero">
+    <section id="about" class="hero">
         <div class="hero-container">
 
             <div class="left">
@@ -106,15 +129,28 @@ document.addEventListener("keydown", (e) => {
 
                 <div class="info-box">
                     <ul>
-                        <li>snchaurasia@bhu.ac.in</li>
-                        <li>sachchidanand.mca07@gmail.com</li>
-                        <li>+91 9492425485</li>
+                        <li>
+                            <a href="mailto:snchaurasia@bhu.ac.in">
+                                snchaurasia@bhu.ac.in
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:sachchidanand.mca07@gmail.com">
+                                sachchidanand.mca07@gmail.com
+                            </a>
+                        </li>
+                        <!-- <li>sachchidanand.mca07@gmail.com</li> -->
+                        <li>
+                            <a href="tel:+919492425485">
+                                +91 9492425485
+                            </a>
+                        </li>
                         <li>Department of Computer Science, BHU</li>
                     </ul>
                 </div>
 
                 <div class="buttons">
-                    <a href="cv.pdf" download class="btn cv">
+                    <a href="snchaurasia@bhu.ac.in.pdf" download class="btn cv">
                         Download CV
                     </a>
 
@@ -126,7 +162,8 @@ document.addEventListener("keydown", (e) => {
             </div>
 
             <div class="image-card">
-                <img src="https://nand-scholar-space.vercel.app/assets/file-bHe4tabh.jpeg" alt="Professor">
+                <img src="https://nand-scholar-space.vercel.app/assets/file-bHe4tabh.jpeg" loading="lazy"
+                    alt="Dr. Sachchida Nand Chaurasia">
             </div>
         </div>
     </section>
@@ -134,50 +171,50 @@ document.addEventListener("keydown", (e) => {
 
     <section id="research">
         <div class="container">
-        <div class="research-header">
+            <div class="research-header">
 
-            <h2>Research Focus</h2>
+                <h2>Research Focus</h2>
 
-            <p>
-                Pioneering advances in computational intelligence
-                and optimization algorithms
-            </p>
+                <p>
+                    Pioneering advances in computational intelligence
+                    and optimization algorithms
+                </p>
 
-        </div>
-
-        <div class="research-grid">
-
-            <div class="research-card">
-                <div class="line"></div>
-                <h3>Combinatorial Optimization</h3>
             </div>
 
-            <div class="research-card">
-                <div class="line"></div>
-                <h3>Evolutionary Algorithms</h3>
-            </div>
+            <div class="research-grid">
 
-            <div class="research-card">
-                <div class="line"></div>
-                <h3>Estimation of Distribution Algorithm</h3>
-            </div>
+                <div class="research-card">
+                    <div class="line"></div>
+                    <h3>Combinatorial Optimization</h3>
+                </div>
 
-            <div class="research-card">
-                <div class="line"></div>
-                <h3>Swarm Intelligence Techniques</h3>
-            </div>
+                <div class="research-card">
+                    <div class="line"></div>
+                    <h3>Evolutionary Algorithms</h3>
+                </div>
 
-            <div class="research-card">
-                <div class="line"></div>
-                <h3>Heuristic & Matheuristic Algorithms</h3>
-            </div>
+                <div class="research-card">
+                    <div class="line"></div>
+                    <h3>Estimation of Distribution Algorithm</h3>
+                </div>
 
-            <div class="research-card">
-                <div class="line"></div>
-                <h3>Reinforcement Learning</h3>
-            </div>
+                <div class="research-card">
+                    <div class="line"></div>
+                    <h3>Swarm Intelligence Techniques</h3>
+                </div>
 
-        </div>
+                <div class="research-card">
+                    <div class="line"></div>
+                    <h3>Heuristic & Matheuristic Algorithms</h3>
+                </div>
+
+                <div class="research-card">
+                    <div class="line"></div>
+                    <h3>Reinforcement Learning</h3>
+                </div>
+
+            </div>
         </div>
     </section>
     <section id="academic-journey">
@@ -601,15 +638,18 @@ document.addEventListener("keydown", (e) => {
 
             <div class="profile-links">
 
-                <a href="https://scholar.google.co.in/citations?user=2uT767IAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="profile-btn">
+                <a href="https://scholar.google.co.in/citations?user=2uT767IAAAAJ&hl=en" target="_blank"
+                    rel="noopener noreferrer" class="profile-btn">
                     Google Scholar
                 </a>
 
-                <a href="https://orcid.org/0000-0002-0635-0808" target="_blank" rel="noopener noreferrer" class="profile-btn">
+                <a href="https://orcid.org/0000-0002-0635-0808" target="_blank" rel="noopener noreferrer"
+                    class="profile-btn">
                     ORCID
                 </a>
 
-                <a href="https://www.scopus.com/authid/detail.uri?authorId=56374333400" target="_blank" rel="noopener noreferrer" class="profile-btn">
+                <a href="https://www.scopus.com/authid/detail.uri?authorId=56374333400" target="_blank"
+                    rel="noopener noreferrer" class="profile-btn">
                     <span>Scopus</span>
                     <small>ID: 56371433400</small>
                 </a>
@@ -631,8 +671,8 @@ document.addEventListener("keydown", (e) => {
             <div class="footer-column">
                 <h4>Contact Information</h4>
 
-                <p>✉ example@university.edu</p>
-                <p>📞 +91 9876543210</p>
+                <p>✉ snchaurasia@bhu.ac.in</p>
+                <p>📞 +91 9492425485</p>
 
                 <p>
                     Department of Computer Science<br>
@@ -644,58 +684,148 @@ document.addEventListener("keydown", (e) => {
             <div class="footer-column">
                 <h4>Quick Links</h4>
 
-                <a href="#">About</a>
-                <a href="#research">Research</a>
+                <a href="#about">About</a>
+                <a href="res.html">Research</a>
                 <a href="contact222222.html">Contact</a>
             </div>
 
             <div class="footer-column">
                 <h4>Academic Profiles</h4>
-                <a href="https://scholar.google.co.in/citations?user=2uT767IAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
-                
+                <a href="https://scholar.google.co.in/citations?user=2uT767IAAAAJ&hl=en" target="_blank"
+                    rel="noopener noreferrer">Google Scholar</a>
+
                 <a href="https://orcid.org/0000-0002-0635-0808" target="_blank" rel="noopener noreferrer">ORCID</a>
-                <a href="https://www.webofscience.com/wos/author/record/E-1946-2016" target="_blank" rel="noopener noreferrer">Researcher ID</a>
+                <a href="https://www.webofscience.com/wos/author/record/E-1946-2016" target="_blank"
+                    rel="noopener noreferrer">Researcher ID</a>
             </div>
 
         </div>
 
-        <div class="footer-bottom">
+        <!-- <div class="footer-bottom">
             © 2024 Dr. Sachchida Nand Chaurasia. All rights reserved.
+        </div> -->
+        <div class="footer-bottom">
+            © <span id="year"></span> Dr. Sachchida Nand Chaurasia. All rights reserved.
         </div>
 
     </footer>
 
-    <script src="scipt.js"></script>
-    <body>
+    <script src="script.js"></script>
+    <!-- <body> -->
 
     <!-- Your page content -->
-
     <script>
-    document.querySelectorAll('a').forEach(link => {
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+    </script>
+    <script>
+        document.querySelectorAll('a').forEach(link => {
 
-        link.addEventListener('click', function(e) {
+            link.addEventListener('click', function (e) {
 
-            const href = this.getAttribute('href');
+                const href = this.getAttribute('href');
 
-            if (
-                href &&
-                !href.startsWith('#') &&
-                !href.startsWith('http')
-            ) {
-                e.preventDefault();
+                if (
+                    href &&
+                    !href.startsWith('#') &&
+                    !href.startsWith('http')
+                ) {
+                    e.preventDefault();
 
-                document.body.classList.add('fade-out');
+                    document.body.classList.add('fade-out');
 
-                setTimeout(() => {
-                    window.location.href = href;
-                }, 600);
+                    setTimeout(() => {
+                        window.location.href = href;
+                    }, 600);
+                }
+            });
+
+        });
+    </script>
+    <script>
+        /* =====================================
+           SCROLL ANIMATION (FADE IN)
+        ===================================== */
+
+        const sections = document.querySelectorAll("section");
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                }
+            });
+        }, {
+            threshold: 0.15
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+
+        /* =====================================
+           SCROLL SPY (ACTIVE NAV AUTO HIGHLIGHT)
+        ===================================== */
+
+        /* const navLinks = document.querySelectorAll(".nav-links a");
+        
+        window.addEventListener("scroll", () => {
+            let current = "";
+        
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 150;
+                const sectionHeight = section.clientHeight;
+        
+                if(pageYOffset >= sectionTop){
+                    current = section.getAttribute("id");
+                }
+            });
+        
+            navLinks.forEach(link => {
+                link.classList.remove("active");
+                if(link.getAttribute("href") === "#" + current){
+                    link.classList.add("active");
+                }
+            });
+        }); */
+
+    </script>
+    <script>
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
+
+        menuToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("show");
+        });
+
+        document.querySelectorAll(".nav-links a")
+            .forEach(link => {
+                link.addEventListener("click", () => {
+                    navLinks.classList.remove("show");
+                });
+            });
+    </script>
+    <button id="topBtn">↑</button>
+    <script>
+        const topBtn = document.getElementById("topBtn");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) {
+                topBtn.style.display = "block";
+            } else {
+                topBtn.style.display = "none";
             }
         });
 
-    });
+        topBtn.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
     </script>
+</body>
 
-</body>
-</body>
 
 </html>

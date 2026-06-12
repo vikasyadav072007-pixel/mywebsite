@@ -4,8 +4,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact & Academic Profiles</title>
 
+    <title>Contact | Dr. Sachchida Nand Chaurasia | BHU</title>
+
+    <!-- SEO -->
+    <meta name="description"
+        content="Contact Dr. Sachchida Nand Chaurasia, Assistant Professor, Department of Computer Science, Banaras Hindu University. Find email addresses, phone number, office location, and academic profiles.">
+
+    <meta name="author" content="Dr. Sachchida Nand Chaurasia">
+
+    <meta name="keywords"
+        content="Contact, Dr. Sachchida Nand Chaurasia, BHU, Computer Science, Email, Phone, Academic Profiles, Google Scholar, ORCID">
+
+    <meta name="robots" content="index, follow">
+
+    <meta name="googlebot" content="index, follow">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#2b1608">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://vikasyadav072007-pixel.github.io/mywebsite/contact222222.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="bhulogo.png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Contact | Dr. Sachchida Nand Chaurasia">
+
+    <meta property="og:description"
+        content="Get in touch with Dr. Sachchida Nand Chaurasia. Contact details, academic profiles, and professional information.">
+
+    <meta property="og:type" content="website">
+
+    <meta property="og:url" content="https://vikasyadav072007-pixel.github.io/mywebsite/contact222222.html">
+
+    <meta property="og:site_name" content="Dr. Sachchida Nand Chaurasia">
+
+    <meta property="og:image" content="https://nand-scholar-space.vercel.app/assets/file-bHe4tabh.jpeg">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="twitter:title" content="Contact | Dr. Sachchida Nand Chaurasia">
+
+    <meta name="twitter:description"
+        content="Contact information and academic profiles of Dr. Sachchida Nand Chaurasia.">
+
+    <meta name="twitter:image" content="https://nand-scholar-space.vercel.app/assets/file-bHe4tabh.jpeg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Contact Page CSS -->
     <link rel="stylesheet" href="contact.css">
 </head>
 
@@ -17,10 +72,14 @@
                 Dr. Sachchida <span>Nand Chaurasia</span>
             </div>
 
+            <div class="menu-toggle">
+                ☰
+            </div>
+
             <div class="nav-links">
                 <a href="index.html">About</a>
-                <a href="https://nand-scholar-space.vercel.app/research">Research</a>
-                <a href="contact.html" class="active">Contact</a>
+                <a href="res.html">Research</a>
+                <a href="contact222222.html" class="active">Contact</a>
             </div>
         </div>
     </nav>
@@ -186,12 +245,12 @@
                         </p>
                         <br>
                         <p>
-                           <h4>Appointments Recommended</h4>
-                           Please email in advance for meetings
+                        <h4>Appointments Recommended</h4>
+                        Please email in advance for meetings
                         </p>
 
                         <p>
-                            
+
                         </p>
 
                     </div>
@@ -336,8 +395,8 @@
             <div class="footer-column">
                 <h4>Contact Information</h4>
 
-                <p>✉ example@university.edu</p>
-                <p>📞 +91 9876543210</p>
+                <p>✉ snchaurasia@bhu.ac.in</p>
+                <p>📞+91 9492425485</p>
 
                 <p>
                     Department of Computer Science<br>
@@ -349,9 +408,9 @@
             <div class="footer-column">
                 <h4>Quick Links</h4>
 
-                <a href="index.html">About</a>
-                <a href="#research">Research</a>
-                <a href="#contact">Contact</a>
+                <a href="index.html#about">About</a>
+                <a href="res.html">Research</a>
+                <a href="#">Contact</a>
             </div>
 
             <div class="footer-column">
@@ -366,80 +425,116 @@
 
         </div>
 
+        <!-- <div class="footer-bottom">
+            © <span id="year"></span> Dr. Sachchida Nand Chaurasia.
+        </div> -->
         <div class="footer-bottom">
-            © 2024 Dr. Sachchida Nand Chaurasia. All rights reserved.
+            © <span id="year"></span> Dr. Sachchida Nand Chaurasia. All rights reserved.
         </div>
-
     </footer>
-
+    <script>document.getElementById("year").textContent =
+            new Date().getFullYear();</script>
     <!-- for opening gmail  -->
-   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script> -->
+    <script>document.getElementById("contact-form").addEventListener("submit", function (e) {
 
-<script>
+            e.preventDefault();
 
-emailjs.init("mGeA_qHGRKsKoCBqy");
+            const firstName = document.querySelector('[name="first_name"]').value;
+            const lastName = document.querySelector('[name="last_name"]').value;
+            const email = document.querySelector('[name="email"]').value;
+            const subject = document.querySelector('[name="subject"]').value;
+            const message = document.querySelector('[name="message"]').value;
 
-document
-.getElementById("contact-form")
-.addEventListener("submit", function(event){
+            const body =
+                `Name: ${firstName} ${lastName}
 
-    event.preventDefault();
+    Email: ${email}
 
-    emailjs.sendForm(
-        "service_zjkhqag",
-        "template_pvfpbhg",
-        this
-    )
-    .then(function(){
+    Message:
+    ${message}`;
 
-        alert("Message sent successfully!");
+            const mailtoLink =
+                `mailto:snchaurasia@bhu.ac.in?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-        document
-        .getElementById("contact-form")
-        .reset();
+            window.location.href = mailtoLink;
+        });</script>
+    <!-- 
+    <script>
+        document.getElementById("contact-form")
+            .addEventListener("submit", function (e) {
 
-    })
-    .catch(function(error){
+                e.preventDefault();
 
-        alert("Failed to send message.");
+                const firstName =
+                    document.querySelector('input[name="first_name"]').value;
 
-        console.log(error);
+                const lastName =
+                    document.querySelector('input[name="last_name"]').value;
 
-    });
+                const email =
+                    document.querySelector('input[name="email"]').value;
 
-});
+                const subject =
+                    document.querySelector('input[name="subject"]').value;
 
-</script>
-<body>
+                const message =
+                    document.querySelector('textarea[name="message"]').value;
+
+                const body =
+                    `Name: ${firstName} ${lastName}
+                     Email: ${email}
+                     Message: ${message}`;
+
+                const gmailUrl =
+                    `https://mail.google.com/mail/?view=cm&fs=1&to=snchaurasia@bhu.ac.in&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                window.open(gmailUrl, "_blank");
+            });
+    </script> -->
 
     <!-- Your page content -->
 
     <script>
-    document.querySelectorAll('a').forEach(link => {
+        document.querySelectorAll('a').forEach(link => {
 
-        link.addEventListener('click', function(e) {
+            link.addEventListener('click', function (e) {
 
-            const href = this.getAttribute('href');
+                const href = this.getAttribute('href');
 
-            if (
-                href &&
-                !href.startsWith('#') &&
-                !href.startsWith('http')
-            ) {
-                e.preventDefault();
+                if (
+                    href &&
+                    !href.startsWith('#') &&
+                    !href.startsWith('http')
+                ) {
+                    e.preventDefault();
 
-                document.body.classList.add('fade-out');
+                    document.body.classList.add('fade-out');
 
-                setTimeout(() => {
-                    window.location.href = href;
-                }, 600);
-            }
+                    setTimeout(() => {
+                        window.location.href = href;
+                    }, 600);
+                }
+            });
+
+        });
+    </script>
+    <script>
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
+
+        menuToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("show");
         });
 
-    });
+        document.querySelectorAll(".nav-links a")
+            .forEach(link => {
+                link.addEventListener("click", () => {
+                    navLinks.classList.remove("show");
+                });
+            });
     </script>
+</body>
 
-</body>
-</body>
 
 </html>

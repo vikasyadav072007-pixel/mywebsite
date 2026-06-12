@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 *{
     margin:0;
     padding:0;
@@ -51,6 +55,9 @@ body{
    GLOBAL SECTION SPACING
    (PUT THIS EARLY - IMPORTANT)
 ========================= */
+#about{
+    scroll-margin-top: 90px;
+}
 
 #research,
 #academic-journey,
@@ -423,15 +430,18 @@ nav{
     position: relative;
 }
 
-#academic-journey .timeline::before {
+#academic-journey .timeline-item::before {
     content: "";
     position: absolute;
     left: 6px;
-    top: 0;
-    bottom: 0;      /* Instead of height:100% */
+    top: 28px;      /* starts below dot */
+    height: 90px;   /* line length */
     width: 2px;
-    background: #d4dcdc;
+    background: #a9c3c3;
 }
+/* #academic-journey .timeline-item:last-child::before {
+    display: none;
+} */
 
 #academic-journey .timeline-item {
     position: relative;
@@ -510,13 +520,14 @@ nav{
 }
 
 #academic-journey .card p {
+    color: #617885;
     font-size: 14px;
     line-height: 1.6;
     margin-bottom: 8px;
 }
 
 #academic-journey .date {
-    color: #777;
+    color: #000000;
     margin-top: 10px;
 }
 
@@ -978,8 +989,9 @@ html {
     justify-content:space-around;
     align-items:center;
     gap:40px;
-
-    backdrop-filter:blur(8px);
+    -webkit-backdrop-filter: blur(8px); /* Safari */
+    backdrop-filter: blur(8px);         /* Chrome, Edge, Firefox */
+    
 }
 
 .contact-item{
@@ -1069,4 +1081,42 @@ body{
     opacity:0;
     transform:translateY(-15px);
     transition:all .6s ease;
+}
+/* =========================
+   MOBILE MENU
+========================= */
+
+.menu-toggle{
+    display:none;
+    font-size:2rem;
+    cursor:pointer;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .nav-links{
+        position:absolute;
+        top:90px;
+        left:0;
+        width:100%;
+
+        background:white;
+
+        flex-direction:column;
+        align-items:center;
+
+        padding:20px 0;
+
+        display:none;
+    }
+
+    .nav-links.show{
+        display:flex;
+    }
 }
