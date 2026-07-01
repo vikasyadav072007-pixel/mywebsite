@@ -1,12 +1,36 @@
+html {
+    scroll-behavior: smooth;
+}
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
     font-family:Arial, Helvetica, sans-serif;
 }
-html {
-    scroll-behavior: smooth;
+
+
+body{
+    opacity:0;
+    animation:fadeIn .6s ease forwards;
 }
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.fade-out{
+    opacity:0;
+    transform:translateY(-15px);
+    transition:all .6s ease;
+}
+
 body{
     min-height:100vh;
 
@@ -28,34 +52,26 @@ body{
     transition:0.3s ease;
 }
 
-/* Hover effect */
+
 .nav-links a:hover{
     background:#000;
     color:#fff;
 }
 
-/* Active (current page) */
+
 .nav-links a.active{
     background:#2b1608;
     color:#fff;
     padding:10px 20px;
     border-radius:30px;
 
-    /* 🔥 Glow effect */
+    
     box-shadow: 0 0 10px rgba(43, 22, 8, 0.6),
                 0 0 25px rgba(43, 22, 8, 0.4);
 
     transform: translateY(-1px);
     transition: all 0.3s ease;
 }
-
-/* =========================
-   GLOBAL SECTION SPACING
-   (PUT THIS EARLY - IMPORTANT)
-========================= */
-
-/* Navbar */
-/* Global Container */
 
 .container{
     width:100%;
@@ -114,9 +130,6 @@ nav{
     border-radius:40px;
 }
 
-/* =========================================
-   RESET
-========================================= */
 
 *{
     margin:0;
@@ -136,9 +149,6 @@ body{
     margin:auto;
 }
 
-/* =========================================
-   SECTION HEADER
-========================================= */
 
 .section-header{
     text-align:center;
@@ -160,9 +170,9 @@ body{
     line-height:1.7;
 }
 
-/* =========================================
-   CONTACT HERO (SCREENSHOT 1)
-========================================= */
+/* 
+   CONTACT HERO (
+ */
 
 #contact-hero{
     min-height:650px;
@@ -209,7 +219,7 @@ body{
     font-weight:700;
 }
 
-/* Glass Card */
+
 
 .hero-contact-card{
     width:100%;
@@ -242,27 +252,27 @@ body{
 .hero-contact-item span{
     display:block;
     color:#dbe7ec;
-    font-size:14px;
+    font-size:18px;
     margin-bottom:10px;
     letter-spacing:.5px;
 }
 
-.hero-contact-item h3{
+.hero-contact-item h5{
     color:#ffffff;
     font-size:1.3rem;
     font-weight:600;
 }
 
-/* =========================================
-   CONTACT SECTION (SCREENSHOT 2)
-========================================= */
+/*
+   CONTACT SECTION
+*/
 
 #contact{
     padding:120px 0;
     background:#f8fafc;
 }
 
-/* Top Cards */
+
 
 .contact-cards{
     display:grid;
@@ -319,7 +329,7 @@ body{
     line-height:1.8;
 }
 
-/* Main Grid */
+
 
 .contact-grid{
     display:grid;
@@ -331,7 +341,7 @@ textarea::placeholder{
     color:#94a3b8;
     font-size:15px;
 }
-/* Message Box */
+
 
 .message-box{
     background:#ffffff;
@@ -414,7 +424,7 @@ textarea::placeholder{
     background:#4a3124;
 }
 
-/* Side Cards */
+
 
 .side-info{
     display:flex;
@@ -444,9 +454,9 @@ textarea::placeholder{
     line-height:1.8;
 }
 
-/* =========================================
+/* 
    ACADEMIC PROFILES
-========================================= */
+*/
 
 #academic-profiles{
     padding:120px 0;
@@ -479,7 +489,7 @@ textarea::placeholder{
     transform:translateY(-8px);
 }
 
-.profile-card h3{
+.profile-card h2{
     margin-bottom:12px;
 }
 
@@ -512,9 +522,6 @@ textarea::placeholder{
     color:#ffffff;
 }
 
-/* =========================================
-   RESPONSIVE
-========================================= */
 
 @media(max-width:900px){
 
@@ -556,9 +563,9 @@ textarea::placeholder{
     }
 }
 
-/* =========================================
+/*
    LOCATION SECTION
-========================================= */
+ */
 
 #location{
     padding:120px 0;
@@ -578,11 +585,10 @@ textarea::placeholder{
 }
 
 #location .section-header p{
-    font-size:1.1rem;
+    font-size:1.6rem;
     color:#5f7788;
 }
 
-/* Main Card */
 
 .location-card{
     max-width:900px;
@@ -613,7 +619,7 @@ textarea::placeholder{
 }
 
 .location-content h4{
-    font-size:1.2rem;
+    font-size:1.4rem;
     color:#5f7788;
     margin-bottom:10px;
     font-weight:500;
@@ -623,7 +629,7 @@ textarea::placeholder{
     display:block;
     color:#6b7f8d;
     margin-bottom:40px;
-    font-size:1rem;
+    font-size:1.2rem;
 }
 
 .location-content p{
@@ -634,12 +640,10 @@ textarea::placeholder{
 
     line-height:2;
 
-    font-size:1.05rem;
+    font-size:1.15rem;
 }
 
-/* =========================================
-   RESPONSIVE
-========================================= */
+
 
 @media(max-width:768px){
 
@@ -659,11 +663,128 @@ textarea::placeholder{
         font-size:2.3rem;
     }
 }
-/* =========================================
+/* 
    FOOTER
-========================================= */
+ */
+
+ 
 
 #site-footer{
+    background:#2b170b;
+    color:#fff;
+    padding:60px 0 25px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.footer-container{
+    width:100%;
+    max-width:1400px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:80px;
+}
+
+/* Heading */
+
+.footer-column h3{
+    font-size:28px;
+    margin-bottom:28px;
+    font-weight:700;
+}
+
+/* Contact */
+
+.footer-item{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    margin-bottom:18px;
+    line-height:1.6;
+}
+
+.footer-item i{
+    color:#ffffff;
+    margin-top:4px;
+    font-size:15px;
+    width:18px;
+}
+
+.footer-item a,
+.footer-item p{
+    color:#ffffff;
+    text-decoration:none;
+    font-size:17px;
+    margin:0;
+}
+
+.footer-item a:hover{
+    color:#9ad5cf;
+}
+
+/* Lists */
+
+.footer-column ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.footer-column ul li{
+    margin-bottom:18px;
+}
+
+.footer-column ul li a{
+    color:#fff;
+    text-decoration:none;
+    font-size:17px;
+    transition:.3s;
+}
+
+.footer-column ul li a:hover{
+    color:#9ad5cf;
+    padding-left:3px;
+}
+
+.footer-column ul li i{
+    margin-right:10px;
+    font-size:13px;
+}
+
+/* Line */
+
+#site-footer hr{
+    width:90%;
+    max-width:1400px;
+    margin:40px auto 25px;
+    border:none;
+    border-top:1px solid rgba(255,255,255,.25);
+}
+
+/* Copyright */
+
+.copyright{
+    text-align:center;
+    font-size:18px;
+    color:#fff;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+    .footer-container{
+        grid-template-columns:1fr;
+        gap:45px;
+    }
+
+    .footer-column h3{
+        font-size:24px;
+    }
+}
+
+/* #site-footer{
     background:#2d1408;
     color:#fff;
     padding:60px 0 25px;
@@ -714,9 +835,7 @@ textarea::placeholder{
 }
 
 
-/* =========================================
-   RESPONSIVE
-========================================= */
+
 
 @media (max-width:768px){
 
@@ -732,32 +851,11 @@ textarea::placeholder{
     .section-header h2{
         font-size:2.2rem;
     }
-}
-body{
-    opacity:0;
-    animation:fadeIn .6s ease forwards;
-}
+} */
 
-@keyframes fadeIn{
-    from{
-        opacity:0;
-        transform:translateY(15px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-.fade-out{
-    opacity:0;
-    transform:translateY(-15px);
-    transition:all .6s ease;
-}
-
-/* =========================
+/* 
    MOBILE MENU
-========================= */
+ */
 
 .menu-toggle{
     display:none;
@@ -765,7 +863,7 @@ body{
     cursor:pointer;
 }
 
-/* Mobile */
+
 
 @media(max-width:768px){
 
@@ -792,4 +890,172 @@ body{
     .nav-links.show{
         display:flex;
     }
+}
+
+
+/* 
+   Schedule & Availability
+ */
+
+#calendar {
+    padding: 90px 0;
+    background: #f8f9fa;
+}
+
+#calendar .section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#calendar .section-header h2 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #2b1608;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+
+#calendar .section-header p {
+    font-size: 19px;
+    color: #617885;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.calendar-wrapper {
+    width: 90%;
+    max-width: 1150px;
+    margin: 0 auto;
+
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+
+    border: 1px solid rgba(0, 0, 0, 0.08);
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.calendar-wrapper:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+}
+
+.calendar-wrapper iframe {
+    width: 100%;
+    height: 700px;
+    border: none;
+    display: block;
+}
+
+
+
+@media (max-width: 992px) {
+
+    #calendar {
+        padding: 70px 0;
+    }
+
+    .calendar-wrapper {
+        width: 95%;
+    }
+
+    .calendar-wrapper iframe {
+        height: 600px;
+    }
+
+    #calendar .section-header h2 {
+        font-size: 40px;
+    }
+
+    #calendar .section-header p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    #calendar {
+        padding: 60px 0;
+    }
+
+    #calendar .section-header h2 {
+        font-size: 32px;
+    }
+
+    #calendar .section-header p {
+        font-size: 16px;
+        padding: 0 15px;
+    }
+
+    .calendar-wrapper {
+        width: 95%;
+        border-radius: 14px;
+    }
+
+    .calendar-wrapper iframe {
+        height: 500px;
+    }
+}
+
+
+/* 
+   FLOATING ANIMATION
+*/
+
+@keyframes floatCard {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Office Hours & Research Interests */
+.info-box {
+    /* animation: floatCard 4s ease-in-out infinite; */
+    transition: all 0.4s ease;
+}
+
+.info-box:hover {
+    transform: translateY(-5px) ;
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.12),
+        0 5px 15px rgba(43,22,8,0.15);
+}
+
+/* Send Message Box */
+.message-box {
+    /* animation: floatCard 5s ease-in-out infinite; */
+    transition: all 0.4s ease;
+}
+
+.message-box:hover {
+    transform: translateY(-5px);
+    box-shadow:
+        0 20px 45px rgba(0,0,0,0.12),
+        0 5px 15px rgba(43,22,8,0.15);
+}
+
+/* Location Card */
+.location-card {
+    /* animation: floatCard 6s ease-in-out infinite; */
+    transition: all 0.4s ease;
+}
+
+.location-card:hover {
+    transform: translateY(-5px) ;
+    box-shadow:
+        0 20px 45px rgba(0,0,0,0.12),
+        0 5px 15px rgba(43,22,8,0.15);
 }

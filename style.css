@@ -8,16 +8,45 @@ html{
     box-sizing:border-box;
     font-family:Arial, Helvetica, sans-serif;
 }
+/* Page load animation */
 
 body{
-    min-height:100vh;
+    opacity:0;
+    animation:fadeIn .6s ease forwards;
+}
 
-    background:linear-gradient(
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.fade-out{
+    opacity:0;
+    transform:translateY(-15px);
+    transition:all .6s ease;
+}
+body{
+    min-height:100vh;
+     background:
+        linear-gradient(
+            90deg,
+            rgba(50,42,34,1) 0%,
+            rgba(57,54,49,1) 25%,
+            rgba(71,79,81,1) 60%,
+            rgba(92,117,127,1) 100%
+        );
+    /* background:linear-gradient(
         90deg,
         #2b1608 0%,
         #40464b 40%,
         #6c8898 100%
-    );
+    ); */
 }
 
 .nav-links a{
@@ -224,7 +253,8 @@ nav{
 
     font-size:20px;
 
-    font-weight:bold;
+    /* font-weight:bold; */
+    
 }
 
 .cv{
@@ -405,14 +435,14 @@ nav{
 }
 
 #academic-journey .section-header h1 {
-    font-size: 42px;
+    font-size: 38px;
     margin-bottom: 10px;
     font-weight: 700;
 }
 
 #academic-journey .section-header p {
     color: #6b7c86;
-    font-size: 17px;
+    font-size: 20px;
 }
 
 #academic-journey .timeline-wrapper {
@@ -500,9 +530,9 @@ nav{
 }
 
 #academic-journey .badge {
-    background: #b8d5ca;
+    background: #abd6c5;
     color: #2f5a52;
-    font-size: 12px;
+    font-size: 14px;
     padding: 5px 12px;
     border-radius: 20px;
     white-space: nowrap;
@@ -521,7 +551,7 @@ nav{
 
 #academic-journey .card p {
     color: #617885;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.6;
     margin-bottom: 8px;
 }
@@ -861,76 +891,120 @@ html {
 ========================================= */
 
 #site-footer{
-    background:#2d1408;
+    background:#2b170b;
     color:#fff;
     padding:60px 0 25px;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
-#site-footer .footer-container{
+.footer-container{
     width:100%;
     max-width:1400px;
-    margin:0 auto;
-    padding:0 20px;
+    margin:auto;
 
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:50px;
+    gap:80px;
 }
 
-#site-footer h4{
-    margin-bottom:20px;
-    font-size:1.1rem;
+/* Heading */
+
+.footer-column h3{
+    font-size:28px;
+    margin-bottom:28px;
+    font-weight:700;
 }
 
-#site-footer p,
-#site-footer a{
+/* Contact */
+
+.footer-item{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    margin-bottom:18px;
+    line-height:1.6;
+}
+
+.footer-item i{
+    color:#ffffff;
+    margin-top:4px;
+    font-size:15px;
+    width:18px;
+}
+
+.footer-item a,
+.footer-item p{
+    color:#ffffff;
+    text-decoration:none;
+    font-size:17px;
+    margin:0;
+}
+
+.footer-item a:hover{
+    color:#9ad5cf;
+}
+
+/* Lists */
+
+.footer-column ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.footer-column ul li{
+    margin-bottom:18px;
+}
+
+.footer-column ul li a{
     color:#fff;
     text-decoration:none;
-    display:block;
-    margin-bottom:10px;
-    line-height:1.7;
+    font-size:17px;
+    transition:.3s;
 }
 
-#site-footer a{
-    transition:all 0.3s ease;
-}
-
-#site-footer a:hover{
+.footer-column ul li a:hover{
     color:#9ad5cf;
     padding-left:3px;
 }
 
-#site-footer .footer-bottom{
+.footer-column ul li i{
+    margin-right:10px;
+    font-size:13px;
+}
+
+/* Line */
+
+#site-footer hr{
+    width:90%;
     max-width:1400px;
-    margin:40px auto 0;
-    padding-top:20px;
+    margin:40px auto 25px;
+    border:none;
+    border-top:1px solid rgba(255,255,255,.25);
+}
 
-    border-top:1px solid rgba(255,255,255,.3);
+/* Copyright */
 
+.copyright{
     text-align:center;
-    font-size:.9rem;
+    font-size:18px;
+    color:#fff;
 }
 
+/* Responsive */
 
-/* =========================================
-   RESPONSIVE
-========================================= */
+@media(max-width:900px){
 
-@media (max-width:768px){
-
-    #professional-activities .activities-grid,
-    #awards-fellowships .awards-grid{
+    .footer-container{
         grid-template-columns:1fr;
+        gap:45px;
     }
 
-    #site-footer .footer-container{
-        grid-template-columns:1fr;
-    }
-
-    .section-header h2{
-        font-size:2.2rem;
+    .footer-column h3{
+        font-size:24px;
     }
 }
+
 
 /* ==========================
    CONTACT SECTION
@@ -1061,7 +1135,7 @@ html {
         justify-content: center;
     }
 }
-body{
+/* body{
     opacity:0;
     animation:fadeIn .6s ease forwards;
 }
@@ -1081,7 +1155,7 @@ body{
     opacity:0;
     transform:translateY(-15px);
     transition:all .6s ease;
-}
+} */
 /* =========================
    MOBILE MENU
 ========================= */
