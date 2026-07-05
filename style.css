@@ -41,12 +41,6 @@ body{
             rgba(71,79,81,1) 60%,
             rgba(92,117,127,1) 100%
         );
-    /* background:linear-gradient(
-        90deg,
-        #2b1608 0%,
-        #40464b 40%,
-        #6c8898 100%
-    ); */
 }
 
 .nav-links a{
@@ -59,7 +53,7 @@ body{
     transition:0.3s ease;
 }
 
-/* Hover effect */
+
 .nav-links a:hover{
     background:#000;
     color:#fff;
@@ -72,7 +66,6 @@ body{
     padding:10px 20px;
     border-radius:30px;
 
-    /* 🔥 Glow effect */
     box-shadow: 0 0 10px rgba(43, 22, 8, 0.6),
                 0 0 25px rgba(43, 22, 8, 0.4);
 
@@ -80,10 +73,6 @@ body{
     transition: all 0.3s ease;
 }
 
-/* =========================
-   GLOBAL SECTION SPACING
-   (PUT THIS EARLY - IMPORTANT)
-========================= */
 #about{
     scroll-margin-top: 90px;
 }
@@ -110,8 +99,6 @@ body{
 nav{
     height:90px;
     background:white;
-
-    /* FIXED HEADER ADDED HERE */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -149,13 +136,6 @@ nav{
     color:#617885;
     font-size:20px;
 }
-
-/* .active{
-    background:#2b1608;
-    color:white !important;
-    padding:15px 35px;
-    border-radius:40px;
-} */
 
 /* Hero Section */
 
@@ -296,9 +276,7 @@ nav{
         font-size:50px;
     }
 }
-/* =========================
-   RESEARCH SECTION
-========================= */
+/*    RESEARCH SECTION */
 
 #research{
     background:#dce9e5;
@@ -464,14 +442,11 @@ nav{
     content: "";
     position: absolute;
     left: 6px;
-    top: 28px;      /* starts below dot */
+    top: 28px;      
     height: 90px;   /* line length */
     width: 2px;
     background: #a9c3c3;
 }
-/* #academic-journey .timeline-item:last-child::before {
-    display: none;
-} */
 
 #academic-journey .timeline-item {
     position: relative;
@@ -510,7 +485,6 @@ nav{
     box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 }
 
-/* Timeline Dot Animation */
 #academic-journey .timeline-item:hover .timeline-dot {
     transform: scale(1.4);
     box-shadow: 0 0 12px rgba(93,129,145,0.5);
@@ -581,9 +555,7 @@ nav{
         transform: translateY(-6px) scale(1.01);
     }
 }
-/* ==========================
-   TEACHING EXCELLENCE
-========================== */
+/*    TEACHING EXCELLENCE  */
 
 #teaching-excellence {
     padding: 100px 20px;
@@ -657,10 +629,6 @@ nav{
     margin: 0;
 }
 
-/* ==========================
-   TABLET
-========================== */
-
 @media (max-width: 1024px) {
     #teaching-excellence .courses-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -671,9 +639,7 @@ nav{
     }
 }
 
-/* ==========================
-   MOBILE
-========================== */
+/*    MOBILE */
 
 @media (max-width: 768px) {
 
@@ -702,15 +668,6 @@ nav{
         font-size: 1.4rem;
     }
 }
-/* =========================================
-   COMMON
-========================================= */
-
-/* .container{
-    max-width:1200px;
-    margin:auto;
-    padding:0 20px;
-} */
 
 .section-header{
     text-align:center;
@@ -730,9 +687,7 @@ nav{
 }
 
 
-/* =========================================
-   PROFESSIONAL ACTIVITIES
-========================================= */
+/*  PROFESSIONAL ACTIVITIES */
 
 #professional-activities{
     padding:90px 0;
@@ -751,7 +706,7 @@ nav{
     border-radius:8px;
     padding:18px 20px;
 
-    /* Smooth hover animation */
+   
     transition: transform 0.3s ease,
                 box-shadow 0.3s ease,
                 border-color 0.3s ease;
@@ -784,9 +739,7 @@ nav{
     }
 }
 
-/* =========================================
-   AWARDS
-========================================= */
+/*   AWARDS */
 
 #awards-fellowships{
     padding:90px 0;
@@ -805,13 +758,11 @@ nav{
     border-radius:8px;
     padding:18px 20px;
 
-    /* Smooth hover animation */
+    
     transition: transform 0.3s ease,
                 box-shadow 0.3s ease,
                 border-color 0.3s ease;
 }
-
-/* Hover Effect */
 #awards-fellowships .award-card:hover{
     transform: translateY(-4px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.12);
@@ -828,17 +779,9 @@ nav{
     line-height:1.8;
 }
 
-/* Responsive */
-/* @media (max-width:768px){
-    #awards-fellowships .awards-grid{
-        grid-template-columns:1fr;
-    }
-} */
 
 
-/* =========================================
-   ACADEMIC PRESENCE
-========================================= */
+/*  ACADEMIC PRESENCE */
 
 #academic-presence{
     padding:90px 0;
@@ -886,9 +829,7 @@ html {
     scroll-behavior: smooth;
 }
 
-/* =========================================
-   FOOTER
-========================================= */
+/* FOOTER */
 
 #site-footer{
     background:#2b170b;
@@ -906,17 +847,11 @@ html {
     grid-template-columns:repeat(3,1fr);
     gap:80px;
 }
-
-/* Heading */
-
 .footer-column h3{
     font-size:28px;
     margin-bottom:28px;
     font-weight:700;
 }
-
-/* Contact */
-
 .footer-item{
     display:flex;
     align-items:flex-start;
@@ -943,9 +878,6 @@ html {
 .footer-item a:hover{
     color:#9ad5cf;
 }
-
-/* Lists */
-
 .footer-column ul{
     list-style:none;
     padding:0;
@@ -982,17 +914,11 @@ html {
     border:none;
     border-top:1px solid rgba(255,255,255,.25);
 }
-
-/* Copyright */
-
 .copyright{
     text-align:center;
     font-size:18px;
     color:#fff;
 }
-
-/* Responsive */
-
 @media(max-width:900px){
 
     .footer-container{
@@ -1006,12 +932,10 @@ html {
 }
 
 
-/* ==========================
-   CONTACT SECTION
-========================== */
+/*    CONTACT SECTION */
 
 #contact-section{
-    min-height:550px;   /* keeps section size similar */
+    min-height:550px;  
     padding:100px 20px;
 
     background:linear-gradient(
@@ -1063,8 +987,8 @@ html {
     justify-content:space-around;
     align-items:center;
     gap:40px;
-    -webkit-backdrop-filter: blur(8px); /* Safari */
-    backdrop-filter: blur(8px);         /* Chrome, Edge, Firefox */
+    -webkit-backdrop-filter: blur(8px); 
+    backdrop-filter: blur(8px);        
     
 }
 
@@ -1085,9 +1009,7 @@ html {
     font-weight:600;
 }
 
-/* ==========================
-   MOBILE
-========================== */
+/* MOBILE */
 
 @media(max-width:768px){
 
@@ -1135,30 +1057,8 @@ html {
         justify-content: center;
     }
 }
-/* body{
-    opacity:0;
-    animation:fadeIn .6s ease forwards;
-}
 
-@keyframes fadeIn{
-    from{
-        opacity:0;
-        transform:translateY(15px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-.fade-out{
-    opacity:0;
-    transform:translateY(-15px);
-    transition:all .6s ease;
-} */
-/* =========================
-   MOBILE MENU
-========================= */
+/*  MOBILE MENU */
 
 .menu-toggle{
     display:none;
@@ -1166,7 +1066,7 @@ html {
     cursor:pointer;
 }
 
-/* Mobile */
+
 
 @media(max-width:768px){
 
