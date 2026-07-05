@@ -45,37 +45,14 @@ body{
     transform:translateY(-15px);
     transition:all .6s ease;
 }
-/* body{
-    opacity:0;
-    transform:translateY(20px);
-    animation:pageLoad 0.6s ease forwards;
-}
 
-@keyframes pageLoad{
-    from{
-        opacity:0;
-        transform:translateY(15px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-body.fade-out{
-    opacity:0;
-    transform:translateY(-15px);
-    transition:all 0.6s ease;
-} */
 body {
     font-family: 'Inter', sans-serif;
     color: var(--foreground);
     background-color: var(--card-bg);
     line-height: 1.5;
 }
-/* =========================================
-   NAVBAR
-========================================= */
+/*  NAVBAR */
 
 nav{
     height: 90px;
@@ -90,7 +67,6 @@ nav{
 }
 
 .nav-container{
-    /* width:90%; */
     max-width:1400px;
     height:100%;
     margin:auto;
@@ -98,8 +74,6 @@ nav{
     display:flex;
     justify-content:space-between;
     align-items:center;
-
-    /* padding:15px 0; */
 }
 
 .logo{
@@ -143,9 +117,7 @@ nav{
     color:white;
 }
 
-/* =========================================
-   MOBILE MENU
-========================================= */
+/* MOBILE MENU */
 
 .menu-toggle{
     display:none;
@@ -320,7 +292,7 @@ nav{
     white-space: nowrap;
 }
 
-/* .btn-read-paper:hover { background-color: var(--primary); color: #ffffff; transform: translateY(-2px); } */
+
 .paper-btn{
     min-width:120px;
     height:38px;
@@ -348,7 +320,7 @@ nav{
 .paper-actions{
     display:flex;
     flex-direction:column;
-    gap:20px;   /* space between buttons */
+    gap:20px;  
 }
 /* Second Button */
 
@@ -456,9 +428,7 @@ nav{
     to { opacity: 1; }
 }
 
-/* =========================================
-   FOOTER
-========================================= */
+/*    FOOTER */
 
 #site-footer{
     background:#2b170b;
@@ -514,7 +484,7 @@ nav{
     color:#9ad5cf;
 }
 
-/* Lists */
+
 
 .footer-column ul{
     list-style:none;
@@ -543,7 +513,7 @@ nav{
     font-size:13px;
 }
 
-/* Line */
+
 
 #site-footer hr{
     width:100%;
