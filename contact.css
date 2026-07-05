@@ -752,7 +752,7 @@ textarea::placeholder{
     font-size:13px;
 }
 
-/* Line */
+
 
 #site-footer hr{
     width:90%;
@@ -784,74 +784,6 @@ textarea::placeholder{
     }
 }
 
-/* #site-footer{
-    background:#2d1408;
-    color:#fff;
-    padding:60px 0 25px;
-}
-
-#site-footer .footer-container{
-    width:100%;
-    max-width:1400px;
-    margin:0 auto;
-    padding:0 20px;
-
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:50px;
-}
-
-#site-footer h4{
-    margin-bottom:20px;
-    font-size:1.1rem;
-}
-
-#site-footer p,
-#site-footer a{
-    color:#fff;
-    text-decoration:none;
-    display:block;
-    margin-bottom:10px;
-    line-height:1.7;
-}
-
-#site-footer a{
-    transition:all 0.3s ease;
-}
-
-#site-footer a:hover{
-    color:#9ad5cf;
-    padding-left:3px;
-}
-#site-footer .footer-bottom{
-    max-width:1400px;
-    margin:40px auto 0;
-    padding-top:20px;
-
-    border-top:1px solid rgba(255,255,255,.3);
-
-    text-align:center;
-    font-size:.9rem;
-}
-
-
-
-
-@media (max-width:768px){
-
-    #professional-activities .activities-grid,
-    #awards-fellowships .awards-grid{
-        grid-template-columns:1fr;
-    }
-
-    #site-footer .footer-container{
-        grid-template-columns:1fr;
-    }
-
-    .section-header h2{
-        font-size:2.2rem;
-    }
-} */
 
 /* 
    MOBILE MENU
@@ -1023,7 +955,7 @@ textarea::placeholder{
 
 /* Office Hours & Research Interests */
 .info-box {
-    /* animation: floatCard 4s ease-in-out infinite; */
+   
     transition: all 0.4s ease;
 }
 
@@ -1034,9 +966,9 @@ textarea::placeholder{
         0 5px 15px rgba(43,22,8,0.15);
 }
 
-/* Send Message Box */
+
 .message-box {
-    /* animation: floatCard 5s ease-in-out infinite; */
+   
     transition: all 0.4s ease;
 }
 
@@ -1047,9 +979,9 @@ textarea::placeholder{
         0 5px 15px rgba(43,22,8,0.15);
 }
 
-/* Location Card */
+
 .location-card {
-    /* animation: floatCard 6s ease-in-out infinite; */
+   
     transition: all 0.4s ease;
 }
 
