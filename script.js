@@ -1,12 +1,10 @@
-// ===============================
-// Portfolio Website JavaScript
-// ===============================
+
 
 document.addEventListener("DOMContentLoaded", () => {
 
     console.log("Portfolio Loaded Successfully");
 
-    // Research Card Hover Effect
+   
 
     const researchCards = document.querySelectorAll(".research-card");
 
@@ -27,8 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
     });
-
-    // Smooth Scrolling for Navigation Links
 
     const navLinks = document.querySelectorAll('a[href^="#"]');
 
