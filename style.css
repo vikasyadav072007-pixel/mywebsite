@@ -1107,412 +1107,99 @@ html {
     }
 }
 
-/* =========================================================
-   FINAL MOBILE OVERFLOW FIX
-   ========================================================= */
-
-html,
-body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-/* ================= NAVBAR ================= */
-
-nav {
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
-}
-
-.nav-container {
-    width: 100%;
-    max-width: 1400px;
-    padding: 0 15px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.logo {
-    min-width: 0;
-    max-width: calc(100% - 55px);
-    font-size: 32px;
-    line-height: 1.1;
-    overflow-wrap: break-word;
-    word-break: normal;
-}
-
-.logo span {
-    display: inline;
-}
-
-.menu-toggle {
-    flex-shrink: 0;
-    width: 40px;
-    text-align: center;
-}
-
-
-/* ================= HERO ================= */
-
-.hero {
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
-}
-
-.hero-container {
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 20px;
-    min-width: 0;
-}
-
-.hero-container > * {
-    min-width: 0;
-    max-width: 100%;
-}
-
-.left {
-    min-width: 0;
-    max-width: 100%;
-}
-
-.hero h1 {
-    max-width: 100%;
-    overflow-wrap: break-word;
-    word-break: normal;
-}
-
-.description {
-    max-width: 100%;
-    overflow-wrap: break-word;
-    word-break: normal;
-}
-
-
-/* ================= INFO BOX ================= */
-
-.info-box {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-    overflow: hidden;
-}
-
-.info-box ul {
-    width: 100%;
-    max-width: 100%;
-}
-
-.info-box li {
-    max-width: 100%;
-    overflow-wrap: anywhere;
-    word-break: break-word;
-}
-
-.info-box li a {
-    max-width: 100%;
-    overflow-wrap: anywhere;
-    word-break: break-word;
-}
-
-
-/* ================= BUTTONS ================= */
-
-.buttons {
-    width: 100%;
-    max-width: 100%;
-}
-
-.btn {
-    max-width: 100%;
-}
-
-
-/* ================= IMAGE ================= */
-
-.image-card {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-}
-
-.image-card img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-}
-
-
-/* ================= OTHER SECTIONS ================= */
-
-.container {
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.research-grid,
-.timeline-wrapper,
-.courses-grid,
-.activities-grid,
-.awards-grid {
-    min-width: 0;
-}
-
-.research-card,
-.card,
-.course-card,
-.activity-card,
-.award-card {
-    min-width: 0;
-    max-width: 100%;
-}
-
-
-/* ================= FOOTER ================= */
-
-.footer-container {
-    width: 100%;
-    max-width: 1400px;
-    padding: 0 20px;
-    min-width: 0;
-}
-
-.footer-column {
-    min-width: 0;
-    max-width: 100%;
-}
-
-.footer-item {
-    min-width: 0;
-}
-
-.footer-item a,
-.footer-item p {
-    max-width: 100%;
-    overflow-wrap: anywhere;
-    word-break: break-word;
-}
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
+/* =================================================
+   MOBILE NAVBAR FIX
+   ================================================= */
 
 @media (max-width: 768px) {
 
     nav {
+        width: 100%;
         height: 90px;
+        position: sticky;
+        top: 0;
+        z-index: 9999;
     }
 
     .nav-container {
+        position: relative;
+        width: 100%;
+        height: 90px;
         padding: 0 15px;
-    }
 
-    .logo {
-        font-size: 25px;
-        line-height: 1.1;
-        max-width: calc(100% - 50px);
-    }
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
 
-    .logo span {
-        display: block;
-    }
-
-    .menu-toggle {
-        font-size: 2rem;
-        flex-shrink: 0;
-    }
-
-
-    /* HERO */
-
-    .hero {
-        padding: 50px 0 70px;
-    }
-
-    .hero-container {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr);
-        gap: 35px;
-        padding: 0 20px;
-    }
-
-    .hero h1 {
-        font-size: 40px;
-        line-height: 1.05;
         margin: 0;
     }
 
-    .description {
-        font-size: 18px;
-        line-height: 1.6;
-    }
-
-    .tag {
-        max-width: 100%;
-        overflow-wrap: break-word;
-    }
-
-
-    /* INFO BOX */
-
-    .info-box {
-        padding: 25px 20px;
-    }
-
-    .info-box li {
-        font-size: 18px;
-        line-height: 1.5;
-        margin: 15px 0;
-    }
-
-
-    /* BUTTONS */
-
-    .buttons {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .btn {
-        width: 100%;
-        padding: 15px 20px;
-        text-align: center;
-    }
-
-
-    /* IMAGE */
-
-    .image-card {
-        padding: 12px;
-    }
-
-
-    /* RESEARCH */
-
-    #research {
-        padding: 70px 0;
-    }
-
-    .research-grid {
-        grid-template-columns: minmax(0, 1fr);
-    }
-
-
-    /* ACADEMIC JOURNEY */
-
-    #academic-journey .timeline-wrapper {
-        grid-template-columns: minmax(0, 1fr);
-    }
-
-    #academic-journey .card-top {
-        flex-wrap: wrap;
-    }
-
-    #academic-journey .card-top h3 {
-        min-width: 0;
-        overflow-wrap: break-word;
-    }
-
-    #academic-journey .badge {
-        white-space: normal;
-    }
-
-
-    /* TEACHING */
-
-    #teaching-excellence .courses-grid {
-        grid-template-columns: minmax(0, 1fr);
-    }
-
-
-    /* PROFESSIONAL */
-
-    #professional-activities .activities-grid {
-        grid-template-columns: minmax(0, 1fr);
-    }
-
-
-    /* AWARDS */
-
-    #awards-fellowships .awards-grid {
-        grid-template-columns: minmax(0, 1fr);
-    }
-
-
-    /* ACADEMIC PRESENCE */
-
-    #academic-presence .profile-links {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    #academic-presence .profile-btn {
-        width: 100%;
-    }
-
-
-    /* FOOTER */
-
-    #site-footer {
-        padding: 50px 15px;
-    }
-
-    .footer-container {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 40px;
-        padding: 0;
-    }
-
-    #site-footer hr {
-        width: 100%;
-    }
-}
-
-
-/* ================= VERY SMALL PHONES ================= */
-
-@media (max-width: 400px) {
-
-    .nav-container {
-        padding: 0 12px;
-    }
-
+    /* Logo */
     .logo {
-        font-size: 22px;
-        max-width: calc(100% - 45px);
+        min-width: 0;
+        max-width: calc(100% - 55px);
+
+        font-size: 24px;
+        line-height: 1.1;
+
+        overflow-wrap: break-word;
     }
 
-    .hero-container {
-        padding: 0 15px;
+    .logo span {
+        color: #627885;
     }
 
-    .hero h1 {
-        font-size: 34px;
+    /* Hamburger */
+    .menu-toggle {
+        display: block;
+        flex-shrink: 0;
+
+        width: 40px;
+        height: 40px;
+
+        font-size: 30px;
+        line-height: 40px;
+
+        text-align: center;
+        cursor: pointer;
+
+        z-index: 10001;
     }
 
-    .description {
-        font-size: 17px;
+    /* Mobile menu */
+    .nav-links {
+        position: absolute;
+
+        top: 90px;
+        left: 0;
+
+        width: 100%;
+
+        display: none;
+
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        gap: 10px;
+
+        padding: 20px 0;
+
+        background: #ffffff;
+
+        box-shadow: 0 8px 15px rgba(0,0,0,0.12);
+
+        z-index: 10000;
     }
 
-    .info-box {
-        padding: 20px 15px;
+    /* When hamburger is clicked */
+    .nav-links.show {
+        display: flex;
     }
 
-    .info-box li {
-        font-size: 16px;
+    .nav-links a {
+        width: auto;
+        font-size: 18px;
+        padding: 10px 25px;
     }
 }
